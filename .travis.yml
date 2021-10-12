@@ -4,3 +4,11 @@ services:
 script:
   - docker build -t ushaheydoc123/node .
   - docker images ushaheydoc123/node
+before_deploy:
+  - docker login -u ushaheydoc123  -p Docker123
+
+deploy:
+  provider: script
+  script: docker push ushaheydoc123/node
+  on:
+    branch: master
