@@ -11,4 +11,4 @@ deploy:
   provider: script
   script: docker push ushaheydoc123/node
   on:
-    branch: master
+    branch: main
