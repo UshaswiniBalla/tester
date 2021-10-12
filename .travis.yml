@@ -1,0 +1,6 @@
+sudo: required
+services:
+  - docker
+script:
+  - docker build -t ushaheydoc123/node .
+  - docker images ushaheydoc123/node
